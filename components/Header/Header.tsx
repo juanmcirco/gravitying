@@ -11,9 +11,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import styled from 'styled-components'
 
-const pages = ['Performances', 'Shows for export'];
+const pages = [];
 const settings = [];
 
 const Header = () => {
@@ -40,7 +39,7 @@ const Header = () => {
             <Container maxWidth="lg">
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <Logo src="/img/logo-gravitying.svg" alt="gravitying" />
+                        <img src="/img/logo-gravitying.svg" alt="gravitying" style={{ maxWidth: 120 }} />
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -77,7 +76,7 @@ const Header = () => {
                         </Menu>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Logo src="/img/logo-gravitying.svg" alt="gravitying" />
+                        <img src="/img/logo-gravitying.svg" alt="gravitying" style={{ maxWidth: 120 }} />
                         {pages.map((page) => (
                             <Button
                                 key={page}
@@ -126,8 +125,6 @@ const Header = () => {
     );
 };
 
-const Logo = styled.img`
-    width: 125px;
-`
+
 
 export default Header;
