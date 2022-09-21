@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from '../../components/Header/Header';
 import Main from '../../components/Main/Main';
+import Footer from '../../components/Footer/Footer';
 
 
 const theme = createTheme({
@@ -19,27 +20,13 @@ const theme = createTheme({
     },
 });
 
-export default function Album() {
+export default function Home() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
             <Main />
-            {/* Footer */}
-            <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-                <Typography variant="h6" align="left" gutterBottom>
-                    Gravitying Cia.
-                </Typography>
-                <Typography
-                    variant="subtitle1"
-                    align="left"
-                    color="text.secondary"
-                    component="p"
-                >
-                    We are Gravitying, we love what we do ❤️
-                </Typography>
-            </Box>
-            {/* End footer */}
+            <Footer />
         </ThemeProvider>
     );
 }
